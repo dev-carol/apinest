@@ -5,7 +5,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center"> Api <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -23,51 +23,60 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
+Api construída para conectar ao banco de dados Funcionários da aplicação front : DR Funcionários
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🚀 Começando
 
-## Installation
+Para iniciar : npm run start ou nest start
+Watch mode:  npm run start:dev
+instalar o doc MySql: npm install --save @nestjs/typeorm typeorm mysql2
 
-```bash
-$ npm install
-```
 
-## Running the app
+## 🛠️ Pré - requisitos e construído com
 
-```bash
-# development
-$ npm run start
+- Node Js
+- Framework: Nest;
+- Linguagem: TypeScript;
+- DataBase: MySql;
+- Insomina: Aplicativo usado para teste em : GET, POST, PUT, DELETE e UPDATE
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
 
-## Test
+## End Points
 
-```bash
-# unit tests
-$ npm run test
+- Listagem de funcionários
+- Mostrar somente um dos funcionários pelo Id
+- Editar funcionários
+- Excluir um ou mais funcionários pelo ID
 
-# e2e tests
-$ npm run test:e2e
+## Observações e aprendizagens :
 
-# test coverage
-$ npm run test:cov
-```
+Primeira Api criada. Com Nest me ajudou a entender como podemos criar uma Api com mais facilidade e quais são os tipos de arquivos que preciso para que possa funcionar. Cada programador tem seu jeito de organizar suas apis e o Nest traz diversas formas que auxiliam para essa criação. Mas os arquivos principais para criar uma APi são: 
 
-## Support
+- SERVER/ PROVIDERS = Para conectar ao seu banco de dados e montar seu servidor/provedores. Indicando : Type, Host, Port, UserName, Password e Database ;
+- MODEL/ MODULE = Para definir um modelo básico de  possível requisições e respostas ao seu banco de dados, podendo até criar determinadas funções e ações, caso aquela requisição não venha com sucesso;
+- CONTROLLER = Indicar a ação que será com alguma informação do tipo  GET, POST, PUT, DELETE...;
+- ROUTES: Esse arquivo é interessante para criação de rotas e deixar mais organizado sua aplicação;
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## COMO A APLICAÇÃO FOI CRIADA?
 
-## Stay in touch
+- Na pasta **Funcionario** foi Criado as arquivos padrões: Funcionarios, Controller, entity, module, providers e  service.
+-  Funcionários : informações principais que quero que tenha no banco de dados e seus tipos: 
+    - name: string
+    - cpf_cnpj: string
+    - regime: string
+    - funcao: string
+    - email: string
+    - telefone: string
+    - telefone2: string
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Controller: Modelo básico para os back points de controle das resquisões, promessas de respostas e tipos :GET, POST, PUT e DELETE
+- Entity: As colunas que estarão armazenadas no banco
+- Module: Para ficar um código mais limpo, defini como cada elemento irá se comportar
+- Providers: Para ficar um código mais limpo, conectei com o repositório para pegar informações
+- Service: Aqui onde a ação começa a trazer resultados dos back points 
 
-## License
+## ✒️ Autores
 
-Nest is [MIT licensed](LICENSE).
+
+* Carol Santos 
